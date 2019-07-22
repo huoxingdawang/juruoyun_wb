@@ -3,6 +3,7 @@
 
 #include "jry_wb_config/config.h"
 
+#include "jry_bl/jry_bl_string.h"
 
 #include "jry_wb_basic_lib/extern.h"
 #include "jry_wb_basic_lib/define.h"
