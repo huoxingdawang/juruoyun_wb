@@ -1,7 +1,7 @@
 #ifndef __JRY_WB_COLOR_TEXT_H
 #define __JRY_WB_COLOR_TEXT_H
 
-#include "include.h"
+#include <string.h>
 
 #define JRY_WB_COLOR_TEXT_LIGHT_RED 	0
 #define JRY_WB_COLOR_TEXT_LIGHT_GREEN	1

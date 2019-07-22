@@ -38,7 +38,11 @@ int main()
 		}
 		memset(char_buff,0,sizeof(char_buff));
 		int len=recv(sock_client,char_buff,sizeof(char_buff),0);
+		
+		
 		fputs(char_buff,stdout);
+		
+		
 		http_send(sock_client,"Hello World!");
 		close(sock_client);
 	}
