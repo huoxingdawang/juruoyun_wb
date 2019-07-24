@@ -10,7 +10,8 @@
 #include <fcntl.h>
 #include <sys/shm.h>
 #include <arpa/inet.h>
-
+#include <unistd.h>
+#include <sys/prctl.h>
 #include "include.h"
 
 #endif

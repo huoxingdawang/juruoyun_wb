@@ -64,6 +64,7 @@ int jry_bl_string_link(jry_bl_string *s1,jry_bl_string *s2)
 	for(int i=0;i<s2->len;i++)
 		s1->s[s1->len+i]=s2->s[i];
 	s1->len=(s1->len+s2->len);
+	s1->s[s1->len]=0;
 	return 1;
 }
 int jry_bl_string_add(jry_bl_string *s1,char * s2)
@@ -80,6 +81,7 @@ int jry_bl_string_add(jry_bl_string *s1,char * s2)
 	for(int i=0;i<s2_len;i++)
 		s1->s[s1->len+i]=s2[i];	
 	s1->len=(s1->len+s2_len);
+	s1->s[s1->len]=0;
 	return 1;
 }
 long long jry_bl_string_string_to_int(jry_bl_string *s,int start)
@@ -91,8 +93,11 @@ long long jry_bl_string_string_to_int(jry_bl_string *s,int start)
 }
 int jry_bl_string_int_to_string(jry_bl_string *s,long long in)
 {
-	register int f=(in<0),cnt=19;
-	char b[20];
+	register int f=(in<0),cnt=20;
+	char b[21];
+	if(f)
+		in=-in;
+	b[cnt--]=0;
 	while(in)
 	{
 		b[cnt--]=in%10+'0';
